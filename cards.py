@@ -71,6 +71,8 @@ class Deck():
 
     def deal(self, num=1):
         hand = []
+        if num > len(self.cards):
+            return []
         for _ in range(num):
             card = self.cards.pop()
             hand.append(card)
